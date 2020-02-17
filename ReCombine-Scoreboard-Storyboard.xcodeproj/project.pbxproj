@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B49468E23FAEF5300A0071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49468D23FAEF5300A0071D /* AppDelegate.swift */; };
+		7B49469023FAEF5300A0071D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49468F23FAEF5300A0071D /* SceneDelegate.swift */; };
+		7B49469223FAEF5300A0071D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49469123FAEF5300A0071D /* ViewController.swift */; };
+		7B49469523FAEF5300A0071D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B49469323FAEF5300A0071D /* Main.storyboard */; };
+		7B49469723FAEF5B00A0071D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B49469623FAEF5B00A0071D /* Assets.xcassets */; };
+		7B49469A23FAEF5B00A0071D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B49469823FAEF5B00A0071D /* LaunchScreen.storyboard */; };
+		7B4946A523FAEF5B00A0071D /* ReCombine_Scoreboard_StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4946A423FAEF5B00A0071D /* ReCombine_Scoreboard_StoryboardTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B4946A123FAEF5B00A0071D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B49468223FAEF5200A0071D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B49468923FAEF5200A0071D;
+			remoteInfo = "ReCombine-Scoreboard-Storyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B49468A23FAEF5300A0071D /* ReCombine-Scoreboard-Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReCombine-Scoreboard-Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B49468D23FAEF5300A0071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B49468F23FAEF5300A0071D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7B49469123FAEF5300A0071D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B49469423FAEF5300A0071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B49469623FAEF5B00A0071D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B49469923FAEF5B00A0071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7B49469B23FAEF5B00A0071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B4946A023FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReCombine-Scoreboard-StoryboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4946A423FAEF5B00A0071D /* ReCombine_Scoreboard_StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCombine_Scoreboard_StoryboardTests.swift; sourceTree = "<group>"; };
+		7B4946A623FAEF5B00A0071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B49468723FAEF5200A0071D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B49469D23FAEF5B00A0071D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B49468123FAEF5200A0071D = {
+			isa = PBXGroup;
+			children = (
+				7B49468C23FAEF5300A0071D /* ReCombine-Scoreboard-Storyboard */,
+				7B4946A323FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests */,
+				7B49468B23FAEF5300A0071D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B49468B23FAEF5300A0071D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B49468A23FAEF5300A0071D /* ReCombine-Scoreboard-Storyboard.app */,
+				7B4946A023FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B49468C23FAEF5300A0071D /* ReCombine-Scoreboard-Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7B49468D23FAEF5300A0071D /* AppDelegate.swift */,
+				7B49468F23FAEF5300A0071D /* SceneDelegate.swift */,
+				7B49469123FAEF5300A0071D /* ViewController.swift */,
+				7B49469323FAEF5300A0071D /* Main.storyboard */,
+				7B49469623FAEF5B00A0071D /* Assets.xcassets */,
+				7B49469823FAEF5B00A0071D /* LaunchScreen.storyboard */,
+				7B49469B23FAEF5B00A0071D /* Info.plist */,
+			);
+			path = "ReCombine-Scoreboard-Storyboard";
+			sourceTree = "<group>";
+		};
+		7B4946A323FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B4946A423FAEF5B00A0071D /* ReCombine_Scoreboard_StoryboardTests.swift */,
+				7B4946A623FAEF5B00A0071D /* Info.plist */,
+			);
+			path = "ReCombine-Scoreboard-StoryboardTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B49468923FAEF5200A0071D /* ReCombine-Scoreboard-Storyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B4946A923FAEF5B00A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-Storyboard" */;
+			buildPhases = (
+				7B49468623FAEF5200A0071D /* Sources */,
+				7B49468723FAEF5200A0071D /* Frameworks */,
+				7B49468823FAEF5200A0071D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReCombine-Scoreboard-Storyboard";
+			productName = "ReCombine-Scoreboard-Storyboard";
+			productReference = 7B49468A23FAEF5300A0071D /* ReCombine-Scoreboard-Storyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B49469F23FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B4946AC23FAEF5B00A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-StoryboardTests" */;
+			buildPhases = (
+				7B49469C23FAEF5B00A0071D /* Sources */,
+				7B49469D23FAEF5B00A0071D /* Frameworks */,
+				7B49469E23FAEF5B00A0071D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B4946A223FAEF5B00A0071D /* PBXTargetDependency */,
+			);
+			name = "ReCombine-Scoreboard-StoryboardTests";
+			productName = "ReCombine-Scoreboard-StoryboardTests";
+			productReference = 7B4946A023FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B49468223FAEF5200A0071D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = JohnCrowson;
+				TargetAttributes = {
+					7B49468923FAEF5200A0071D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					7B49469F23FAEF5B00A0071D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 7B49468923FAEF5200A0071D;
+					};
+				};
+			};
+			buildConfigurationList = 7B49468523FAEF5200A0071D /* Build configuration list for PBXProject "ReCombine-Scoreboard-Storyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B49468123FAEF5200A0071D;
+			productRefGroup = 7B49468B23FAEF5300A0071D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B49468923FAEF5200A0071D /* ReCombine-Scoreboard-Storyboard */,
+				7B49469F23FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B49468823FAEF5200A0071D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B49469A23FAEF5B00A0071D /* LaunchScreen.storyboard in Resources */,
+				7B49469723FAEF5B00A0071D /* Assets.xcassets in Resources */,
+				7B49469523FAEF5300A0071D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B49469E23FAEF5B00A0071D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B49468623FAEF5200A0071D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B49469223FAEF5300A0071D /* ViewController.swift in Sources */,
+				7B49468E23FAEF5300A0071D /* AppDelegate.swift in Sources */,
+				7B49469023FAEF5300A0071D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B49469C23FAEF5B00A0071D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4946A523FAEF5B00A0071D /* ReCombine_Scoreboard_StoryboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B4946A223FAEF5B00A0071D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B49468923FAEF5200A0071D /* ReCombine-Scoreboard-Storyboard */;
+			targetProxy = 7B4946A123FAEF5B00A0071D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B49469323FAEF5300A0071D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B49469423FAEF5300A0071D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B49469823FAEF5B00A0071D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B49469923FAEF5B00A0071D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B4946A723FAEF5B00A0071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7B4946A823FAEF5B00A0071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B4946AA23FAEF5B00A0071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W25U99UGA7;
+				INFOPLIST_FILE = "ReCombine-Scoreboard-Storyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard-Storyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B4946AB23FAEF5B00A0071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W25U99UGA7;
+				INFOPLIST_FILE = "ReCombine-Scoreboard-Storyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard-Storyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7B4946AD23FAEF5B00A0071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W25U99UGA7;
+				INFOPLIST_FILE = "ReCombine-Scoreboard-StoryboardTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard-StoryboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReCombine-Scoreboard-Storyboard.app/ReCombine-Scoreboard-Storyboard";
+			};
+			name = Debug;
+		};
+		7B4946AE23FAEF5B00A0071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W25U99UGA7;
+				INFOPLIST_FILE = "ReCombine-Scoreboard-StoryboardTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard-StoryboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReCombine-Scoreboard-Storyboard.app/ReCombine-Scoreboard-Storyboard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B49468523FAEF5200A0071D /* Build configuration list for PBXProject "ReCombine-Scoreboard-Storyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4946A723FAEF5B00A0071D /* Debug */,
+				7B4946A823FAEF5B00A0071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B4946A923FAEF5B00A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-Storyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4946AA23FAEF5B00A0071D /* Debug */,
+				7B4946AB23FAEF5B00A0071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B4946AC23FAEF5B00A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-StoryboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4946AD23FAEF5B00A0071D /* Debug */,
+				7B4946AE23FAEF5B00A0071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B49468223FAEF5200A0071D /* Project object */;
+}
