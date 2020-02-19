@@ -6,29 +6,115 @@
 //  Copyright © 2020 JohnCrowson. All rights reserved.
 //
 
-import XCTest
+import Combine
 @testable import ReCombine_Scoreboard_Storyboard
+import ReCombineTest
+import XCTest
 
 class ScoreboardViewModelTests: XCTestCase {
+    var mockStore: MockStore<Scoreboard.State>!
+    var vm: ScoreboardViewModel!
+    var cancellableSet: Set<AnyCancellable> = []
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        mockStore = MockStore(state: Scoreboard.State(home: 0, away: 0, apiStatus: .none))
+        vm = ScoreboardViewModel(store: mockStore)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        cancellableSet = []
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // MARK: - Property bindings
+    
+    func testPropertyBindings() {
+        let expectationReceiveHomeScore = expectation(description: "receiveHomeScore")
+        vm.homeScore.sink { score in
+            XCTAssertEqual("0", score)
+            expectationReceiveHomeScore.fulfill()
+        }.store(in: &cancellableSet)
+        
+        let expectationReceiveAwayScore = expectation(description: "receiveAwayScore")
+        vm.awayScore.sink { score in
+            XCTAssertEqual("0", score)
+            expectationReceiveAwayScore.fulfill()
+        }.store(in: &cancellableSet)
+        
+        let expectationReceiveAPIStatus = expectation(description: "receiveAPIStatus")
+        vm.apiStatus.sink { apiStatus in
+            XCTAssertEqual(.none, apiStatus)
+            expectationReceiveAPIStatus.fulfill()
+        }.store(in: &cancellableSet)
+                
+        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore, expectationReceiveAPIStatus], timeout: 10.0)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    // MARK: - showAlert Effect
+        
+    func testShowAlert_UpdatesShowAlert_OnPostScoreSuccess() {
+        let expectationReceiveValues = expectation(description: "receiveValue")
+        vm.showAPISuccessAlert.collect(2).sink { showAlertValues in
+            guard let firstAlertValue = showAlertValues.first,
+                let secondAlertValue = showAlertValues.last else { return XCTFail() }
+            XCTAssertFalse(firstAlertValue)
+            XCTAssertTrue(secondAlertValue)
+            expectationReceiveValues.fulfill()
+        }.store(in: &cancellableSet)
+        
+        let expectationReceiveActions = expectation(description: "receiveAction")
+        mockStore.dispatchedActions.collect(2).sink { actions in
+            guard let firstAction = actions.first,
+                let secondAction = actions.last else { return XCTFail() }
+            XCTAssertTrue(firstAction is Scoreboard.PostScoreSuccess)
+            XCTAssertTrue(secondAction is Scoreboard.ResetScore)
+            expectationReceiveActions.fulfill()
+        }.store(in: &cancellableSet)
+        
+        mockStore.dispatch(action: Scoreboard.PostScoreSuccess())
+        
+        wait(for: [expectationReceiveValues, expectationReceiveActions], timeout: 10.0)
     }
+    
+    // MARK: - Action dispatching functions
 
+    func testHomeScoreTapped_DispatchesHomeScoreAction() {
+        let expectationReceiveAction = expectation(description: "receiveAction")
+        mockStore.dispatchedActions.sink { action in
+            XCTAssertTrue(action is Scoreboard.HomeScore)
+            expectationReceiveAction.fulfill()
+        }.store(in: &cancellableSet)
+        
+        vm.homeScoreTapped()
+        
+        wait(for: [expectationReceiveAction], timeout: 10.0)
+    }
+    
+    func testAwayScoreTapped_DispatchesAwayScoreAction() {
+        let expectationReceiveAction = expectation(description: "receiveAction")
+        mockStore.dispatchedActions.sink { action in
+            XCTAssertTrue(action is Scoreboard.AwayScore)
+            expectationReceiveAction.fulfill()
+        }.store(in: &cancellableSet)
+        
+        vm.awayScoreTapped()
+
+        wait(for: [expectationReceiveAction], timeout: 10.0)
+    }
+    
+    func testPostScoreTapped_DispatchesPostScoreAction() {
+        let expectationReceiveAction = expectation(description: "receiveAction")
+        mockStore.dispatchedActions.sink { action in
+            guard let postScore = action as? Scoreboard.PostScore else {
+                return XCTFail("Expected post score action")
+                expectationReceiveAction.fulfill()
+            }
+            XCTAssertEqual("0", postScore.home)
+            XCTAssertEqual("0", postScore.away)
+            expectationReceiveAction.fulfill()
+        }.store(in: &cancellableSet)
+        
+        vm.postScoreTapped()
+        
+        wait(for: [expectationReceiveAction], timeout: 10.0)
+    }
 }

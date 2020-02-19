@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Foundation
 import ReCombine
 
 class ScoreboardViewModel {
@@ -21,7 +22,7 @@ class ScoreboardViewModel {
     // MARK: - Internal Properties
     
     private let store: Store<Scoreboard.State>
-    private let showAPISuccessAlertSubject: PassthroughSubject<Bool, Never>
+    private let showAPISuccessAlertSubject: CurrentValueSubject<Bool, Never>
     private var cancellableSet: Set<AnyCancellable> = []
 
     // Adding store as a constructor parameter allows us to
@@ -30,7 +31,7 @@ class ScoreboardViewModel {
     init(store: Store<Scoreboard.State> = appStore) {
         
         self.store = store
-        showAPISuccessAlertSubject = PassthroughSubject()
+        showAPISuccessAlertSubject = CurrentValueSubject(false)
         showAPISuccessAlert = showAPISuccessAlertSubject.eraseToAnyPublisher()
         
         // MARK: - Bind Properties to Selectors
@@ -45,6 +46,7 @@ class ScoreboardViewModel {
         
         let showAlert = Effect(dispatch: true) { actions in
             actions.ofType(Scoreboard.PostScoreSuccess.self)
+                .receive(on: RunLoop.main)
                 .handleEvents(receiveOutput: { [weak self] _ in
                     self?.showAPISuccessAlertSubject.send(true)
                 })
