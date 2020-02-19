@@ -54,11 +54,9 @@ class ScoreboardViewModelTests: XCTestCase {
         
     func testShowAlert_UpdatesShowAlert_OnPostScoreSuccess() {
         let expectationReceiveValues = expectation(description: "receiveValue")
-        vm.showAPISuccessAlert.collect(2).sink { showAlertValues in
-            guard let firstAlertValue = showAlertValues.first,
-                let secondAlertValue = showAlertValues.last else { return XCTFail() }
-            XCTAssertFalse(firstAlertValue)
-            XCTAssertTrue(secondAlertValue)
+        vm.showAPISuccessAlert.collect(1).sink { showAlertValues in
+            guard let firstAlertValue = showAlertValues.first else { return XCTFail() }
+            XCTAssertTrue(firstAlertValue)
             expectationReceiveValues.fulfill()
         }.store(in: &cancellableSet)
         

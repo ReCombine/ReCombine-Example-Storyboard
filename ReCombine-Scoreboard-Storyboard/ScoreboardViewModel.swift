@@ -23,7 +23,7 @@ class ScoreboardViewModel {
     // MARK: - Internal Properties
     
     private let store: Store<Scoreboard.State>
-    private let showAPISuccessAlertSubject: CurrentValueSubject<Bool, Never>
+    private let showAPISuccessAlertSubject: PassthroughSubject<Bool, Never>
     private var cancellableSet: Set<AnyCancellable> = []
 
     // Adding store as a constructor parameter allows us to
@@ -32,7 +32,7 @@ class ScoreboardViewModel {
     init(store: Store<Scoreboard.State> = appStore) {
         
         self.store = store
-        showAPISuccessAlertSubject = CurrentValueSubject(false)
+        showAPISuccessAlertSubject = PassthroughSubject()
         showAPISuccessAlert = showAPISuccessAlertSubject.eraseToAnyPublisher()
         
         // MARK: - Bind Properties to Selectors

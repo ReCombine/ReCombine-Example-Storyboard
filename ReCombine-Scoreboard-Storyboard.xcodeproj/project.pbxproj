@@ -48,6 +48,7 @@
 		7B4946B123FAF10D00A0071D /* Scoreboard+ReCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scoreboard+ReCombine.swift"; sourceTree = "<group>"; };
 		7B4946B823FAFB1400A0071D /* ScoreAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreAPIManager.swift; sourceTree = "<group>"; };
 		7B4946BC23FB940600A0071D /* Scoreboard+ReCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scoreboard+ReCombineTests.swift"; sourceTree = "<group>"; };
+		7B4946BE23FCEEA500A0071D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		7B49468123FAEF5200A0071D = {
 			isa = PBXGroup;
 			children = (
+				7B4946BE23FCEEA500A0071D /* README.md */,
 				7B49468C23FAEF5300A0071D /* ReCombine-Scoreboard-Storyboard */,
 				7B4946A323FAEF5B00A0071D /* ReCombine-Scoreboard-StoryboardTests */,
 				7B49468B23FAEF5300A0071D /* Products */,
