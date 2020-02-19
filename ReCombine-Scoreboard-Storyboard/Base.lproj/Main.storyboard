@@ -124,25 +124,49 @@
                                     <action selector="postScoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QxA-C7-dAK"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WTb-Eq-igc">
+                                <rect key="frame" x="197" y="626" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="WQY-FL-szo"/>
+                                    <constraint firstAttribute="width" constant="20" id="gpJ-OU-Ed0"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error posting score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOP-tc-XCk">
+                                <rect key="frame" x="20" y="626" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9lH-AO-9fP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8Gw-WT-XDI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="6xj-NN-JJm"/>
                             <constraint firstItem="455-4U-xKW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Bzo-Cl-rWd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LOP-tc-XCk" secondAttribute="trailing" constant="20" id="LAe-zt-PUP"/>
                             <constraint firstItem="lu3-hP-Yqf" firstAttribute="top" secondItem="455-4U-xKW" secondAttribute="bottom" constant="32" id="NJ5-aT-6WM"/>
                             <constraint firstItem="455-4U-xKW" firstAttribute="top" secondItem="oio-Ek-SvN" secondAttribute="bottom" constant="32" id="NY3-Sx-rHq"/>
                             <constraint firstItem="8Gw-WT-XDI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pgb-8J-mZ3"/>
+                            <constraint firstItem="LOP-tc-XCk" firstAttribute="top" secondItem="455-4U-xKW" secondAttribute="bottom" constant="37" id="Qu3-uw-49c"/>
                             <constraint firstItem="455-4U-xKW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WI9-8e-pSE"/>
                             <constraint firstItem="455-4U-xKW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bZN-aK-u1q"/>
+                            <constraint firstItem="WTb-Eq-igc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gcU-t3-3Io"/>
                             <constraint firstItem="8Gw-WT-XDI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hwX-M0-6er"/>
+                            <constraint firstItem="LOP-tc-XCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kMy-b0-VsP"/>
                             <constraint firstItem="lu3-hP-Yqf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rMc-tv-lMh"/>
                             <constraint firstItem="oio-Ek-SvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rnU-Cd-zoE"/>
+                            <constraint firstItem="WTb-Eq-igc" firstAttribute="top" secondItem="455-4U-xKW" secondAttribute="bottom" constant="37" id="yQB-GM-307"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="WTb-Eq-igc" id="b2A-mp-DRC"/>
                         <outlet property="awayScoreLabel" destination="JL8-CZ-1BI" id="fMr-RE-eSK"/>
+                        <outlet property="errorLabel" destination="LOP-tc-XCk" id="32v-CI-jnf"/>
                         <outlet property="homeScoreLabel" destination="88v-IC-d2v" id="5G4-ze-kMQ"/>
+                        <outlet property="postScoreButton" destination="lu3-hP-Yqf" id="4zs-lf-StO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

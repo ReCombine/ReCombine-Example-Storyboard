@@ -9,7 +9,7 @@
 import XCTest
 @testable import ReCombine_Scoreboard_Storyboard
 
-class ReCombine_Scoreboard_StoryboardTests: XCTestCase {
+class ScoreboardViewModelTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

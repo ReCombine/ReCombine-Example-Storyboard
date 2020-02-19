@@ -10,32 +10,52 @@ import Combine
 import ReCombine
 
 class ScoreboardViewModel {
-    private let store: Store<Scoreboard.State>
-    private let showAlertSubject: PassthroughSubject<Bool, Never>
-    private var cancellableSet: Set<AnyCancellable> = []
+    
+    // MARK: - Exposed Properties
+    
     let homeScore: AnyPublisher<String, Never>
     let awayScore: AnyPublisher<String, Never>
-    let showAlert: AnyPublisher<Bool, Never>
- 
+    let apiStatus: AnyPublisher<ScoreAPIStatus, Never>
+    let showAPISuccessAlert: AnyPublisher<Bool, Never>
+    
+    // MARK: - Internal Properties
+    
+    private let store: Store<Scoreboard.State>
+    private let showAPISuccessAlertSubject: PassthroughSubject<Bool, Never>
+    private var cancellableSet: Set<AnyCancellable> = []
+
+    // Adding store as a constructor parameter allows us to
+    // inject a MockStore for unit testings. Adding a default
+    // value eliminates the requirement of supplying it everywhere.
     init(store: Store<Scoreboard.State> = appStore) {
+        
         self.store = store
-        showAlertSubject = PassthroughSubject()
+        showAPISuccessAlertSubject = PassthroughSubject()
+        showAPISuccessAlert = showAPISuccessAlertSubject.eraseToAnyPublisher()
+        
+        // MARK: - Bind Properties to Selectors
+        // What are selectors? See https://recombine.io/selectors
         
         homeScore = store.select(Scoreboard.getHomeScoreString)
         awayScore = store.select(Scoreboard.getAwayScoreString)
-        showAlert = showAlertSubject.eraseToAnyPublisher()
+        apiStatus = store.select(Scoreboard.getAPIStatus)
         
-        let showAlertEffect = Effect(dispatch: true) { actions in
+        // MARK: - Register PostScoreSuccess Effect
+        // What are (side) effects? See https://recombine.io/effects
+        
+        let showAlert = Effect(dispatch: true) { actions in
             actions.ofType(Scoreboard.PostScoreSuccess.self)
                 .handleEvents(receiveOutput: { [weak self] _ in
-                    self?.showAlertSubject.send(true)
+                    self?.showAPISuccessAlertSubject.send(true)
                 })
                 .map { _ in Scoreboard.ResetScore() }
                 .eraseActionType()
                 .eraseToAnyPublisher()
         }
-        store.register(showAlertEffect).store(in: &cancellableSet)
+        store.register(showAlert).store(in: &cancellableSet)
     }
+    
+    // MARK: - Dispatch Actions as a Result of UI Events
     
     func homeScoreTapped() {
         store.dispatch(action: Scoreboard.HomeScore())
@@ -46,6 +66,7 @@ class ScoreboardViewModel {
     }
     
     func postScoreTapped() {
+        // Get the latest value for home and away score to pass into the PostScore action
         Publishers.CombineLatest(homeScore, awayScore)
             .first()
             .sink { [weak self] homeScore, awayScore in
